@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Laxminath Software</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/CSS/style.css">
+    <style>
+        :root {
+            --primary-color: #6c63ff;
+            --secondary-color: #4d44db;
+            --accent-color: #ff6584;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        /* Animated Gradient Background for Hero */
+        .contact-hero {
+            background: linear-gradient(-45deg, #6c63ff, #4d44db, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Card Hover Effects */
+        .card {
+            transition: all 0.3s ease;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .card-body {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+        }
+        
+        .card:hover::before {
+            opacity: 0.1;
+        }
+        
+        /* Form Styling */
+        #contactForm {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Social Icons */
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Map Container */
+        .map-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin: 20px 0;
+        }
+        
+        /* Animated Elements */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Floating Animation */
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand animate__animated animate__fadeInLeft" href="/Home.html" style="font-size: 30px;" > <img src="/images/WhatsApp Image 2025-06-03 at 16.43.08_cc4e4707.jpg" alt="" srcset="" style="height: 50px; border-radius: 50%; margin-right: 10px;" >𝕷𝖆𝖝𝖒𝖎𝖓𝖆𝖙𝖍 𝕾𝖔𝖋𝖙𝖜𝖆𝖗𝖊</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item animate__animated animate__fadeInDown animate__delay-1s">
+                        <a class="nav-link" href="/Home.html">Home</a>
+                    </li>
+                    <li class="nav-item animate__animated animate__fadeInDown animate__delay-2s">
+                        <a class="nav-link" href="/About.html">About</a>
+                    </li>
+                    <li class="nav-item animate__animated animate__fadeInDown animate__delay-3s">
+                        <a class="nav-link active" href="/Contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <header class="contact-hero py-5 mt-5">
+        <div class="container py-5 text-center">
+            <h1 class="display-4 animate__animated animate__zoomIn">Contact Us</h1>
+            <p class="lead animate__animated animate__fadeInUp animate__delay-1s">We'd love to hear from you</p>
+        </div>
+    </header>
+
+    <!-- Contact Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 animate-on-scroll">
+                    <h2 class="mb-4">Get In Touch</h2>
+                    <form id="contactForm" class="floating">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="phone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <h2 class="mb-4 animate-on-scroll">Our Office</h2>
+                    <div class="card mb-4 animate-on-scroll" style="transition-delay: 0.2s">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-map-marker-alt me-2 text-primary"></i>Address</h5>
+                            <p class="card-text">115 Sita 
+                                vihar Colony Niwaru<br>Jaipur Rajasthan</p>
+                        </div>
+                    </div>
+                    <div class="card mb-4 animate-on-scroll" style="transition-delay: 0.4s">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-phone me-2 text-primary"></i>Phone</h5>
+                            <p class="card-text">+91 8619593916<br>+91 8502035063</p>
+                        </div>
+                    </div>
+                    <div class="card animate-on-scroll" style="transition-delay: 0.6s">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-envelope me-2 text-primary"></i>Email</h5>
+                            <p class="card-text">info@laxminathsoftware.com<br>support@laxminathsoftware.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-0">
+        <div class="container-fluid p-0">
+            <div class="map-container animate-on-scroll">
+                
+                <iframe src="https://www.google.com/maps/embed?pb=!4v1748950222273!6m8!1m7!1s4ZAZSXCgIWCfY3tOP1n7EA!2m2!1d26.9675577411313!2d75.72263469222462!3f234.8338495798079!4f-1.6272478615630206!5f0.7820865974627469" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="animate__animated animate__fadeIn"style="font-size: 30px;" >𝕷𝖆𝖝𝖒𝖎𝖓𝖆𝖙𝖍 𝕾𝖔𝖋𝖙𝖜𝖆𝖗𝖊</h5>
+                    <p class="animate__animated animate__fadeIn animate__delay-1s">Innovative solutions for your business needs.</p>
+                </div>
+                <div class="col-md-6 text-md-end social-icons">
+                    <a href="#" class="text-white me-2 animate__animated animate__fadeIn animate__delay-2s"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-2 animate__animated animate__fadeIn animate__delay-3s"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-2 animate__animated animate__fadeIn animate__delay-4s"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-white animate__animated animate__fadeIn animate__delay-5s"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0 animate__animated animate__fadeIn animate__delay-6s">&copy; 2023 Laxminath Software. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <!-- <script src="/js/script.js"></script>
+    <script>
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+            
+            // Form submission animation
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    this.classList.add('animate__animated', 'animate__pulse');
+                    setTimeout(() => {
+                        this.classList.remove('animate__animated', 'animate__pulse');
+                        alert('Thank you for your message! We will get back to you soon.');
+                        this.reset();
+                    }, 1000);
+                });
+            }
+        });
+    </script> -->
+    <script src="/script.js"></script>
+</body>
+</html>

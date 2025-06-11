@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Laxminath Software</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #4e73df;
+            --secondary-color: #1cc88a;
+            --dark-color: #2e3a4d;
+            --light-color: #f8f9fc;
+            --accent-color: #f6c23e;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, var(--dark-color) 0%, var(--primary-color) 100%) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .about-hero {
+            background: linear-gradient(rgba(78, 115, 223, 0.8), rgba(78, 115, 223, 0.9)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .about-hero h1 {
+            font-weight: 700;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .about-hero p {
+            font-weight: 300;
+        }
+        
+        .values-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-member-img {
+            height: 65vh;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .card:hover .team-member-img {
+            transform: scale(1.05);
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--dark-color) 0%, var(--primary-color) 100%) !important;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            margin: 0 5px;
+        }
+        
+        .social-icon:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+        
+        /* Animation classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .about-hero {
+                padding: 60px 0;
+            }
+            
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .team-member-img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand animate__animated animate__fadeInLeft" href="/Home.html"style="font-size: 30px;" > <img src="/images/WhatsApp Image 2025-06-03 at 16.43.08_cc4e4707.jpg" alt="" srcset="" style="height: 50px; border-radius: 50%; margin-right: 10PX;">𝕷𝖆𝖝𝖒𝖎𝖓𝖆𝖙𝖍 𝕾𝖔𝖋𝖙𝖜𝖆𝖗𝖊</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <header class="about-hero animate__animated animate__fadeIn">
+        <div class="container py-5">
+            <h1 class="display-4 animate__animated animate__fadeInDown">About Laxminath Software</h1>
+            <p class="lead animate__animated animate__fadeInUp animate__delay-1s">Delivering excellence in software development since 2010</p>
+        </div>
+    </header>
+
+    <!-- About Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 animate-on-scroll">
+                    <h2 class="mb-4">Our Story</h2>
+                    <p>Founded in 2010, Laxminath Software began as a small team of passionate developers with a vision to create innovative software solutions that make a difference.</p>
+                    <p>Over the years, we've grown into a full-service software development company serving clients across various industries, from startups to Fortune 500 companies.</p>
+                    <p>Our commitment to quality, innovation, and customer satisfaction has been the driving force behind our success.</p>
+                    <button class="btn btn-primary mt-3">Learn More</button>
+                </div>
+                <div class="col-lg-6 animate-on-scroll">
+                    <img src="/images/WhatsApp Image 2025-06-03 at 16.43.08_cc4e4707.jpg" alt="Our Team" class="img-fluid rounded shadow-lg" style="height: 400px; border-radius: 70">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 animate-on-scroll">Meet Our Team</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4 animate-on-scroll">
+                    <div class="card">
+                        <img src="/images/WhatsApp Image 2025-06-03 at 14.46.35_8e4d1a7a.jpg" class="card-img-top team-member-img" alt="Team Member">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Lokesh Vyas</h3>
+                            <p class="text-muted">DataBase-Handler</p>
+                            <p class="card-text">Backend-Doveloper (PHP-Laravel)</p>
+                            <div class="mt-3">
+                                <a href="#" class="btn btn-sm btn-outline-primary">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 animate-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="card">
+                        <img src="/images/WhatsApp Image 2025-06-03 at 14.59.56_0e323d3d.jpg" class="card-img-top team-member-img" alt="Team Member">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Saurabh-Sharma</h3>
+                            <p class="text-muted">Text-Sporter</p>
+                            <p class="card-text">Backend-Doveloper (Cake-PHP)</p>
+                            <div class="mt-3">
+                                <a href="#" class="btn btn-sm btn-outline-primary">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 animate-on-scroll" style="transition-delay: 0.4s;">
+                    <div class="card">
+                        <img src="/images/WhatsApp Image 2025-06-03 at 15.03.33_66edf48a.jpg" class="card-img-top team-member-img" alt="Team Member">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Yogendra-Sharma</h3>
+                            <p class="text-muted">Fronted-Doveloper</p>
+                            <p class="card-text">Fronted-Dovelope developer with expertise in HTML---CSS---Java-Script----React-Js programming languages and frameworks.</p>
+                            <div class="mt-3">
+                                <a href="#" class="btn btn-sm btn-outline-primary">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-4 mb-4 animate-on-scroll" style="transition-delay: 0.4s;">
+                    <div class="card">
+                        <img src="/images/WhatsApp Image 2025-06-03 at 14.47.37_c9b4aeb1.jpg" class="card-img-top team-member-img" alt="Team Member">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Harshit-Parashar</h3>
+                            <p class="text-muted">Fronted-Doveloper</p>
+                            <p class="card-text">Fronted-Dovelope developer with expertise in HTML---CSS---Java-Script----React-Js programming languages and frameworks.</p>
+                            <div class="mt-3">
+                                <a href="#" class="btn btn-sm btn-outline-primary">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-4 mb-4 animate-on-scroll" style="transition-delay: 0.4s;">
+                    <div class="card">
+                        <img src="/images/WhatsApp Image 2025-06-03 at 15.00.46_46b86058.jpg" class="card-img-top team-member-img" alt="Team Member">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Datta-Vyas</h3>
+                            <p class="text-muted">Marketing-Support</p>
+                            <p class="card-text">Basic Knowaladge of </p>
+                            <div class="mt-3">
+                                <a href="#" class="btn btn-sm btn-outline-primary">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 animate-on-scroll">Our Values</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4 animate-on-scroll">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-lightbulb values-icon mb-3"></i>
+                            <h3 class="card-title">Innovation</h3>
+                            <p class="card-text">We constantly explore new technologies and approaches to deliver cutting-edge solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 animate-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-handshake values-icon mb-3"></i>
+                            <h3 class="card-title">Integrity</h3>
+                            <p class="card-text">We believe in transparent communication and ethical business practices.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 animate-on-scroll" style="transition-delay: 0.4s;">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-users values-icon mb-3"></i>
+                            <h3 class="card-title">Collaboration</h3>
+                            <p class="card-text">We work closely with our clients to understand their needs and deliver tailored solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 mb-4 mb-md-0 animate-on-scroll">
+                    <h2 class="display-4">12+</h2>
+                    <p class="lead">Years Experience</p>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0 animate-on-scroll" style="transition-delay: 0.1s;">
+                    <h2 class="display-4">150+</h2>
+                    <p class="lead">Projects Completed</p>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0 animate-on-scroll" style="transition-delay: 0.2s;">
+                    <h2 class="display-4">50+</h2>
+                    <p class="lead">Happy Clients</p>
+                </div>
+                <div class="col-md-3 animate-on-scroll" style="transition-delay: 0.3s;">
+                    <h2 class="display-4">30+</h2>
+                    <p class="lead">Team Members</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h5>Laxminath Software</h5>
+                    <p>Innovative solutions for your business needs.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <hr class="my-4 bg-light opacity-25">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 Laxminath Software. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <!-- <script>
+        // Scroll animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+            
+            // Smooth scroll for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        }); -->
+    <!-- </script> -->
+     <script src="/script.js"></script>
+</body>
+</html>
